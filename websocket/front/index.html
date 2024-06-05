@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="connect">
+      <form>
+        <label for="username">Username :</label>
+        <input type="text" id="usernameInput" required />
+        <label for="room">Room :</label>
+        <input type="text" id="roomInput" required />
+        <button>Connect</button>
+      </form>
+    </div>
+
+    <div class="game">
+      <div class="game-infos">
+        <h1>Memory Game</h1>
+        <span id="room"></span>
+        <span id="players"></span>
+        <div id="turn"></div>
+      </div>
+      <div class="cards"></div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+    integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
+</html>
