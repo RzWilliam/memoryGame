@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("http://192.168.233.175:3000");
 let room = "";
 let username = "";
 let opponent = "";
@@ -106,7 +106,7 @@ function revealCard(cardName, cardIndex) {
     `.card[data-index='${cardIndex}']`
   );
   cardElement.innerHTML = `
-        <img src='./logo/${cardName}.png'/>
+        <img src='./logo/${cardName}.png' draggable="false"/>
     `;
   cardElement.classList.remove("back");
   cardElement.classList.add("front");
