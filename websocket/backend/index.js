@@ -63,8 +63,8 @@ io.on('connection', (socket) => {
         io.to(room).emit('leave', room);
     });
 
-    socket.on('selectCard', (room, cardIndex) => {
-        handleCardSelection(room, cardIndex, socket.id);
+    socket.on('selectCard', (room, cardName, cardIndex) => {
+        handleCardSelection(room, cardName ,cardIndex, socket.id);
     });
 
     function startGame(room) {
@@ -73,10 +73,10 @@ io.on('connection', (socket) => {
         io.to(room).emit('startGame', shuffledCards, rooms[room].players[0].username);
     }
 
-    function handleCardSelection(room, cardIndex, playerId) {
+    function handleCardSelection(room, cardName, cardIndex, playerId) {
         const roomData = rooms[room];
         if (roomData.players[roomData.currentPlayer].id === playerId && !roomData.matchedCards.includes(cardIndex)) {
-            io.to(room).emit('cardSelected', cardIndex, playerId);
+            io.to(room).emit('cardSelected', cardName, cardIndex, playerId);
 
             const selectedCards = roomData.selectedCards || [];
             selectedCards.push(cardIndex);

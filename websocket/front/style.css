@@ -38,6 +38,8 @@ body{
 }
 
 .game .game-infos {
+    width: 90%;
+    margin: 16px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,10 +54,24 @@ body{
 
 .game .game-infos span {
     font-size: 14px;
+    font-weight: bold;
+}
+
+.game .game-infos table {
+    width: 100%;
+    margin-top: 16px;
+    border-collapse: collapse;
+
+}
+
+.game .game-infos table td {
+    text-align: center;
+    border: 2px solid white;
+    width: 50%;
 }
 
 .cards {
-    width: 80%;
+    width: 90%;
     margin: 24px auto;
     display: flex;
     gap: 16px;
@@ -78,6 +94,17 @@ body{
     padding: 4px;
 }
 
+.cards .card img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .cards .card.back {
     background-image: url('./back.jpg');
     background-size: cover;
@@ -86,16 +113,10 @@ body{
 
 .cards .card.back img {
     opacity: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .cards .card.front img{
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    opacity: 1;   
 }
 
 .cards .card.matched {
