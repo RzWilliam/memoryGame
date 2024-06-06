@@ -1,4 +1,5 @@
-const socket = io("http://192.168.233.175:3000");
+const ip = "http://10.217.28.151:3000"
+const socket = io(ip);
 let room = "";
 let username = "";
 let opponent = "";
