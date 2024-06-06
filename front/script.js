@@ -1,4 +1,4 @@
-const ip = "http://10.217.28.151:3000"
+const ip = "https://memorygame-jgjs.onrender.com"
 const socket = io(ip);
 let room = "";
 let username = "";
